@@ -1,0 +1,673 @@
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <style>
+  .body {
+    background-color: #cb0000;
+    height: 518px;
+  }
+    .pad {
+      background-color: white;
+      font-size: 40px;
+      width: 344px;
+      height: 100px;
+      border-width: 5px;
+      border-color: black;
+    }
+    .pad:hover {
+      background-color: white;
+    }
+    .pad:active {
+      background-color: white;
+      border-width: 10px;
+    }
+    .typing {
+      caret-color: red;
+      care-shape: bar;
+      width: 344px;
+      height: 100px;
+      text-align: right;
+      font-size: 30px;
+      border-width: 0px;
+      font-family: Sans-Serif;
+      font-weight: bold;
+      outline: none;
+    }
+    .num {
+      background-color: #191924;
+      font-size: 30px;
+      color: white;
+      width: 83px;
+      height: 74px;
+      border-width: 1px;
+      border-color: black;
+      box-shadow: inset 0 5px 15px #131313;
+        -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+    }
+    .num:hover {
+      background-color: #191924;
+      font-weight: bold;
+    }
+    .num:active {
+      background-color: lightseagreen;
+      border-width: 1px;
+      border-color: ;
+    }
+      .cl {
+        background-color: crimson;
+        width: 170px;
+        height: 74px;
+          -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+           
+      }
+      .cl:hover {
+        background-color: crimson;
+      }
+      .cl:active {
+        background-color: lightseagreen;
+      border-width: 1px;
+      border-color: ;
+      }
+        .cle {
+            -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+         position: fixed;
+         left: 182px;
+         top: 180px;
+      width: 83px;
+      height: 74px;
+    }
+     .bha {
+         position: fixed;
+         left: 269px;
+         top: 180px;
+      width: 83px;
+      height: 74px;
+    }
+    .full {
+      position: fixed;
+      top: 40px;
+      left: 8px;
+      width: 360px;
+      height: 518px;
+      background-color: #222233;
+      border-color: black;
+      border-width: 5px;
+     
+    }
+        .line {
+      width: 8px;
+      height: 580px;
+      background-color: #222233;
+      position: fixed;
+      top: 4px;
+      left: 0px;
+    }
+        .topl {
+      width: 368px;
+      height: 40px;
+      background-color: #222233;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+    }
+      .percent {
+      background-color: #222233;
+      width: 30px;
+      height: 30px;
+      border-radius: 100px;
+      border-width: 0px;
+      position: fixed;
+      top: 145px;
+      left: 316px;
+      color: white;
+        -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+    }
+    .percent:active {
+      background-color: #363648;
+    }
+    .creator {
+        -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: cursive;
+      position: fixed;
+      top: 95px;
+      left: 9px;
+      animation-name:myfirst;             /*--> Animation Name*/
+
+animation-duration:2.5s;             /*--> Animation Duration*/
+animation-iteration-count: infinite;
+    }
+    
+@keyframes myfirst                  /*--> calling this function by Name*/
+{
+10% {color:red;} 
+40% {color:blue; } 
+20% {color:white;} 
+80% {color: green;}
+70% {color:pink;} 
+}
+     .titlea {
+       color: white;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: Sans-Serif;
+      position: fixed;
+      top: 0px;
+      left: 122px;
+      outline: 2px dashed white;
+        -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+    }
+    .copy {
+      width: 35px;
+      height: 35px;
+      border-radius: 1px;
+      background-color: white;
+  display: none;
+      position: fixed;
+      top: 46px;
+      left: 13px;
+    }
+      .copy:hover {
+      
+      border: 1px solid #a2a002;
+    }
+    .copy:active {
+      background-color: #b4b4b4;
+    }
+    
+    
+    
+    
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1cc4ee;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.a {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.a:hover {
+  color: #f1f1f1;
+}
+
+.closebtn {
+  background-color: #1cc4ee;
+  border: 0px solid #1cc4ee;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+   -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+  color: black;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+    
+  .openv {
+    position: fixed;
+    top: 1px;
+    left: 4px;
+    color: white;
+    font-size: 25px;
+  }  
+  .links {
+    background-color: #1cc4ee;
+  
+    border-width: 0px;
+    width: 253px;
+    height: 50px;
+    font-size: 18px;
+      -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+  }
+  .links:hover {
+    background-color: #949494;
+  }
+  .profi {
+    border: 2px solid black;
+    border-radius: 100px;
+  }
+  .pi {
+    position: fixed;
+    left: 285px;
+    top: 145px;
+  }
+
+  
+  
+  .btn-group {
+  background-color: #3d5888; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: ; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left;
+  /* Float the buttons side by side*/ 
+ position:fixed;
+ top: 95px;
+ left: 7px;
+ display: none;
+   -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+  }
+.wobtn {
+  background-color: #191924; /* Green background */
+  border: 1px solid #222233; /* Green border */font-size: 7px;
+  
+  color: white; /* White text */
+  padding: 10px 24px; 
+  width: 86px;
+  height: 5px;/* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+.wobtn:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.wobtn:hover {
+  background-color: #00ff71;
+}
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group:hover {
+  background-color: #00ff64;
+}
+.backinp {
+  width: 345px;
+  height: 60px;
+  position: fixed;
+  top: 40px;
+  left: 7px;
+  text-align: right;
+  border: 0px solid black;
+  font-size: 20px;
+  display: none;
+}
+.clfx {
+  position: fixed;
+  top: 145px;
+  left: 255px;
+  display: none;
+}
+.parag {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+  </style>
+  <body bgcolor="#222233"><div class="full">
+    <p class="creator">Z.A.D.S</p>
+    <button class="percent" onmouseup="window.location.href='Percent.html'">&#37;</button>
+        <button id="copbtn" class="copy" onmouseup="copy()"><img src="copy.png" height="20" width="20"/></button>
+    <div class="pad">
+    <input max="19" min="0" class="typing" id="screen" placeholder="CALCULATE           " readonly="readonly" />
+    <input class="typing backinp" id="screen2" placeholder="CALCULATE                       " readonly="readonly" />
+    </div><input style="display:none;" type="text" id="try" readonly="readonly"/><button id="closefx" class="Percent pi" onmouseup="closefx()">×</button> <button id="openfx" class="Percent pi" onmouseup="showfx()">Fx</button><br><br>
+    <div class="numb">
+  
+    <button class="num cl" onmouseup="clearScreen()">CLEAR</button>
+    <button class="num cle" onclick="dele()" id="backt" ontouchstart="del()" ontouchend="stop()"><img src="backspace10.png" width="55" height="55"/></button>
+     <button class="num bha divide" onmouseup="divide()">&#247;</button><br>
+        <button class="num" onmouseup="screen(7)">7</button>
+         <button class="num" onmouseup="screen(8)">8</button>
+          <button class="num" onmouseup="screen(9)">9</button>
+           <button class="num guna" onmouseup="guna()">&#215;</button><br>
+            <button class="num" onmouseup="screen(4)">4</button>
+             <button class="num" onmouseup="screen(5)">5</button>
+              <button class="num" onmouseup="screen(6)">6</button>
+               <button class="num minus" onmouseup="minus()">&#8722;</button><br>
+                <button class="num" onmouseup="screen(1)">1</button>
+                 <button class="num" onmouseup="screen(2)">2</button>
+                  <button class="num" onmouseup="screen(3)">3</button>
+                   <button class="num plus" onmouseup="plus()">+</button><br>
+              <button class="num" onmouseup="screen(0)">0</button>
+               <button class="num" onmouseup="screend(00)">00</button>
+                <button class="num" onmouseup="point()">.</button>
+                 <button class="num equal" onmouseup="calculate()">=</button>
+  </div></div><div class="line"></div><div class="topl"><p class="titlea">   &nbsp;&nbsp;CALCULATOR&nbsp;&nbsp;</p></div>
+
+
+
+<div id="fxcon" class="btn-group">
+  <button class="wobtn" onmouseup="cos()">cos</button>
+  <button class="wobtn" onmouseup="sin()">sin</button>
+  <button class="wobtn" onmouseup="tan()">tan</button>
+  <button class="wobtn" onmouseup="log()">In</button>
+  <br>
+   <button class="wobtn" onmouseup="In()">e</button>
+  <button class="wobtn" onmouseup="pi()">π</button>
+  <button class="wobtn" onmouseup="braca()">(</button>
+  <button class="wobtn" onmouseup="bracb()">)</button>
+</div>
+
+
+
+
+<div id="mySidenav" class="sidenav">
+  <button class="closebtn" onclick="closeNav()">&times;</button>
+    <button class="closebtn" onclick="closeNav()">&times;</button><img class="profi" class="prof" src="calc.jpg" height="80" width="80"/>
+  <b class="parag">Calculator</b><be><br><br><hr>
+  <button class="links" onmouseup="setTimeout( function() {window.location.href='Percent.html'}, 70);">&nbsp;Calculate Percentage</button>
+   <button class="links" onmouseup="setTimeout( function() {window.location.href='square.html'}, 70);">&nbsp; Square Root & Exponent</button>
+    <button class="links" onmouseup="setTimeout( function() {window.location.href='Temperature.html'}, 70);">&nbsp; Temperature Converter</button>
+     <button class="links" onmouseup="setTimeout( function() {window.location.href='Factor.html'}, 70);">&nbsp;Factor Calculator</button>
+    <button class="links" onmouseup="setTimeout( function() {window.location.href='Areaofsquare.html'}, 70);">&nbsp;Square</button>
+      <button class="links" onmouseup="setTimeout( function() {window.location.href='Rectangle.html'}, 70);">&nbsp;Rectangle</button>
+     <button class="links" onmouseup="setTimeout( function() {window.location.href='Circle.html'}, 70);">&nbsp;Circle</button>
+    <button class="links" onmouseup="setTimeout( function() {window.location.href='Cube.html'}, 70);">&nbsp;Cube</button>
+   <button class="links" onmouseup="setTimeout( function() {window.location.href='Sphere.html'}, 70);">&nbsp;Sphere</button>
+      <button class="links" onmouseup="setTimeout( function() {window.location.href='CalculatorGame.html'}, 70);">&nbsp;Calculator Game</button>
+  <br><br><br> <br><br><br> <br><br><br> <br>
+  <a target="_blank" href="#">&nbsp;&nbsp;About&nbsp;</a>
+  <a class="links" href="#">Contact</a>
+</div>
+<span class="openv" onclick="openNav()">&#9776;</span>
+
+
+  </body>
+  <script>
+  function showfx() {
+    document.getElementById("fxcon").style.display = "block";
+    display.style.display = "none";
+    document.getElementById("screen2").style.display = "block";
+    display.style.height = "90" + "px";
+    document.getElementById("openfx").style.display = "none";
+    document.getElementById("closefx").style.display = "block";
+  }
+  
+  
+function closefx() {
+  document.getElementById("screen2").style.display = "none";
+  display.style.display = "block";
+  document.getElementById("fxcon").style.display = "none";
+  document.getElementById("closefx").style.display = "none";
+  document.getElementById("openfx").style.display = "block";
+}
+ 
+  
+  
+  function sin() {
+    display.value += "sin(";
+    document.getElementById("screen2").value += "sin(";
+    document.getElementById("try").value += "Math.sin(";
+  }
+  function cos() {
+    display.value += "cos(";
+    document.getElementById("screen2").value += "cos(";
+    document.getElementById("try").value += "Math.cos(";
+  }
+  function tan() {
+    display.value += "tan(";
+    document.getElementById("screen2").value += "tan(";
+    document.getElementById("try").value += "Math.tan(";
+  }
+  function log() {
+    display.value += "In(";
+    document.getElementById("screen2").value += "In(";
+    document.getElementById("try").value += "Math.log(";
+  }
+  function In() {
+    display.value += "e";
+    document.getElementById("screen2").value += "e";
+    document.getElementById("try").value += Math.E;
+  }
+  function braca() {
+    display.value += "(";
+    document.getElementById("screen2").value += "(";
+    document.getElementById("try").value += "(";
+  }
+  function bracb() {
+    display.value += ")";
+    document.getElementById("screen2").value += ")";
+    document.getElementById("try").value += ")";
+  }
+  
+  
+  
+  function copy() {
+    window.navigator.vibrate(200);
+    display.select();
+    document.getElementById("screen2").select();
+    document.excecCommand("copy");
+  }
+var display = document.getElementById("screen");
+var myInterval;
+    function clearScreen() {
+ document.getElementById("screen").value = "";
+ document.getElementById("try").value = "";
+document.getElementById("screen2").value = "";
+ document.getElementById("copbtn").style.display = "none";
+}
+if(screen.value == "") {
+  document.getElementById("copbtn").style.display = 'none';
+}
+
+function screen(value) {
+ document.getElementById("screen").value += value;
+ document.getElementById("try").value += value;
+ document.getElementById("screen2").value += value;
+}
+function divide() {
+  if(display.value === ""||display.value === "-") {
+    document.getElementById("screen").value += "";
+  document.getElementById("try").value += "";
+  document.getElementById("screen2").value += "";
+  }
+  else {
+  document.getElementById("screen").value += "÷";
+  document.getElementById("try").value += "/";
+  document.getElementById("screen2").value += "÷";
+  }
+}
+function pi() {
+  document.getElementById("screen").value += "π";
+  document.getElementById("try").value += "3.142857142857143*";
+  document.getElementById("screen2").value += "π";
+}
+function guna() {
+  if(display.value === ""||display.value === "-") {
+    document.getElementById("screen").value += "";
+  document.getElementById("try").value += "";
+  document.getElementById("screen2").value += "";
+  }
+  else {
+  document.getElementById("screen").value += "×";
+  document.getElementById("try").value += "*";
+  document.getElementById("screen2").value += "×";
+  }
+}
+function minus() {
+ if(display.value === "-") {
+    document.getElementById("screen").value += "";
+  document.getElementById("try").value += "";
+  document.getElementById("screen2").value += "";
+  }
+  else {
+  document.getElementById("screen").value += "-";
+  document.getElementById("try").value += "-";
+  document.getElementById("screen2").value += "-";
+  }
+}
+function plus() {
+  if(display.value === ""||display.value === "-") {
+    document.getElementById("screen").value += "";
+  document.getElementById("try").value += "";
+  document.getElementById("screen2").value += "";
+  }
+  else {
+  document.getElementById("screen").value += "+";
+  document.getElementById("try").value += "+";
+  document.getElementById("screen2").value += "+";
+  }
+}
+/*
+var ek = 1;
+var du = 1;
+var bara = ek - du;
+if(display.value === eval(bara)) {
+  display.value = "0";
+}
+*/
+function screend() {
+  if(display.value === ""||display.value === "-") {
+    document.getElementById("screen").value += "";
+  document.getElementById("try").value += "";
+  document.getElementById("screen2").value += "";
+  }
+  else {
+  document.getElementById("screen").value += "00";
+  document.getElementById("try").value += "00";
+  document.getElementById("screen2").value += "00";
+  }
+}
+  function point() {
+    if(display.value === ""||display.value === "-") {
+    document.getElementById("screen").value += "0.";
+  document.getElementById("try").value += "0.";
+  document.getElementById("screen2").value += "0.";
+  }
+  else {
+  document.getElementById("screen").value += ".";
+  document.getElementById("try").value += ".";
+  document.getElementById("screen2").value += ".";
+  }
+}
+
+var myInterval2;
+  function del() {
+     myInterval2 = setInterval( function() {
+ document.getElementById('try').value = document.getElementById('try').value.slice(0, - 1);
+ document.getElementById("screen2").value = document.getElementById("screen2").value.slice(0, -1);
+}, 150);
+   myInterval = setInterval( function() {
+  display.value = display.value.substr(0, display.value.length - 1);}, 150);
+
+}
+
+function dele() {
+  display.value = display.value.substr(0, display.value.length - 1);
+}
+
+function stop() {
+  clearInterval(myInterval);
+  clearInterval(myInterval2);
+}
+function calculate() {
+  if(display.value === "") {
+    display.value = "";
+  }
+  else {
+ var pon = document.getElementById("try");
+ var q = eval(pon.value);
+ document.getElementById("screen").value = q;
+ document.getElementById("try").value = q;
+ document.getElementById("screen2").value = q
+ document.getElementById("copbtn").style.display = "block";
+  }
+}
+
+
+
+function openNav() {
+sideNav = document.getElementById("mySidenav");
+  sideNav.style.width = "250px";
+}
+window.onclick = function(event) {
+    if (event.target == sideNav) {
+        sideNav.style.width = "0";
+    }
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+  </script>
+</html>
+</html>

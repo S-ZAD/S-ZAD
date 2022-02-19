@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 0.1rem solid white;
+  font-size: 20px;
+  color: white;
+}
+</style>
+</head>
+<body bgcolor="black">
+<center>
+  <h1 style="color: white;">SCORES</h1><br>
+<table>
+  <thead>
+    <tr>
+      
+      <th>NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>SCORE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody class="score" id="tbody">
+    
+  </tbody>
+ 
+</table>
+<button onclick="add()">add</button>
+</center>
+
+</body>
+<script>
+var myNam = localStorage.getItem("myName");
+var myScor = localStorage.getItem("myScore");
+  function add() {
+   
+    document.getElementById("tbody").innerHTML += "<tr><td>"+myNam+"</td><td>"+myScor+"</td></tr>";
+   
+  }
+  setTimeout(add, 1);
+</script>
+</html>

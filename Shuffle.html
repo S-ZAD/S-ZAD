@@ -1,0 +1,60 @@
+<html>
+  <style>
+    .body {
+  margin: 20px; 
+}
+.div > .div {
+  display: inline-block;
+  background: #26A69A;
+  color: white;
+  margin: 4px;
+  padding: 8px;
+  border-radius: 4px;
+}
+  </style>
+  <body>
+   <ul class="shuffle">
+  <li>This</li>
+  <li>Little</li>
+  <li>Piggy</li>
+  <li>Went</li>
+  <li>To</li>
+  <li>Market</li>
+</ul>
+
+<div class="shuffle">
+  <div>This</div>
+  <div>Little</div>
+  <div>Piggy</div>
+  <div>Went</div>
+  <div>To</div>
+  <div>Market</div>
+</div>
+
+<br><br>
+
+<button class="button" id="shuffle">Shuffle</button>
+
+  </body>
+  <script>
+    $.fn.shuffleChildren = function() {
+  $.each(this.get(), function(index, el) {
+    var $el = $(el);
+    var $find = $el.children();
+
+    $find.sort(function() {
+      return 0.5 - Math.random();
+    });
+
+    $el.empty();
+    $find.appendTo($el);
+  });
+};
+
+$("#shuffle").click(function() {
+  // Usage
+  $(".shuffle").shuffleChildren();
+});
+
+  </script>
+</html>
